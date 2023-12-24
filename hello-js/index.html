@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <script   src="/main.js" ></script>
+        <meta charset="UTF-8">
+        <link rel="icon" href="/favicon.ico" /> 
+        <meta name="viewport" content="width=device-width.initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title> JavaScriptStreet
+        </title>
+        <link rel="stylesheet" href="/css/index.css" />
+    </head>
+
+
+    <body>
+        <!-- Header --> 
+        <!-- App Header -->
+        <iframe class="AppHeaderFrame appFrame" src="/view/header.html"  ></iframe>
+
+        <iframe id="ContentFrame" class="AppContentFrame appFrame" src="/view/jsDocs.html" name="pageContent"></iframe>  </iframe>
+        <!-- App Menu -->
+        <!-- <a href="/view/home.html" onclick="RedirectTo()" target="page">Home</a>
+        <a href="/view/about.html" target="page">About</a> -->
+
+  
+        <!-- App Footer -->
+        <iframe class="AppFooterFrame appFrame" src="/view/footer.html"  ></iframe>
+        
+
+        
+    </body>
+
+
+
+    <script>
+    // Selecting the iframe element
+    var iframe = document.getElementsByClassName("appFrame");
+   
+    // Adjusting the iframe height onload event
+
+    for(let i = 0 ; i < iframe.length; i++) {
+        let currentFrame = iframe[i];
+        currentFrame.onload = function(){
+            currentFrame.style.height = currentFrame.contentWindow.document.body.scrollHeight + 1 + 'px';
+    }
+
+    
+}
+    </script>
+
+
+</html>

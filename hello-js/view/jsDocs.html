@@ -1,0 +1,68 @@
+
+<link rel="stylesheet" href="/css/index.css" />
+<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+
+
+<div  class="jsDocsContainer">
+    <div class="content-width">
+    <div class="row">
+        <div class="jsDocsMenuDiv  col-md-3"> 
+            <div id="myTopnav" class="topnav"> 
+                <button type="button" class="icon"  onclick="myFunction()">  
+                    <i class="bi bi-list"></i>
+                </button>   
+
+                <a href="./contentView/gettingStarted.html" target="docsContent">Getting Started </a> 
+                <a href="./contentView/whyJavaScript.html" target="docsContent" >Why JavaScript? </a> 
+                <a href="#" target="docsContent" >Variables</a> 
+                <a href="#" target="docsContent" >Loops</a> 
+                <a href="./contentView/functions.html" target="docsContent" >Functions</a> 
+                <br/>
+                    
+        </div>
+        </div>
+    
+        <div  class="jsDocsRouteDiv col-md-9 "> 
+            <iframe id="docsFrame" class="appFrame" src="./contentView/gettingStarted.html" name="docsContent"></iframe>
+        </div>
+    </div>  
+
+</div>  
+
+
+
+    <script>
+        function myFunction()  {
+            // alert("called")
+            var x = document.getElementById("myTopnav");
+             if(x === null) { console.log("x is null")}
+             else {
+                if (x.className === "topnav") {
+                x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+               }
+          }
+
+
+
+          // Selecting the iframe element
+    var iframe = document.getElementById("docsFrame");
+   
+   // Adjusting the iframe height onload event
+
+   if(iframe) { 
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 1 + 'px';
+
+        }
+    }
+    </script>
+
+ 
+
+</div>  
+
+
